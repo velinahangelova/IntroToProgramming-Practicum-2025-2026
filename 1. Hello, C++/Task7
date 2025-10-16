@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main () {
+    
+    int code; 
+    
+    std :: cin >> code;
+    
+    int suffix = code % 1000;
+    
+    std :: cout << "*****" << suffix << std :: endl;
+    
+
+}
