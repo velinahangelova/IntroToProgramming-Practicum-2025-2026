@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main () {
+    
+    double euro;
+    
+    std :: cin >> euro;
+    
+    double dollars = euro * 1.1;
+    double yeni = euro * 145;
+    
+    std :: cout << "dollars = " << dollars << std :: endl;
+    std :: cout << "yeni = " << yeni << std :: endl;
+    
+}
