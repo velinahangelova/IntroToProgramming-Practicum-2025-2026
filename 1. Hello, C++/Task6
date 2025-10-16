@@ -1,0 +1,26 @@
+#include <iostream>
+
+int main () {
+    
+    int firstNumber; 
+    int secondNumber;
+    
+    std :: cin >> firstNumber >> secondNumber;
+    
+    int Prod = firstNumber * secondNumber;
+    
+    std :: cout << "Prod:" << Prod << std :: endl;
+    
+    int units = Prod % 10;
+    std :: cout << "Last digit:" << units << std :: endl;
+    
+    std :: cout << "Is odd:";
+    
+    if (units % 2 == 1) {
+        std :: cout << "true";
+    }
+    
+    else {
+        std :: cout << "false";
+    }  
+}
