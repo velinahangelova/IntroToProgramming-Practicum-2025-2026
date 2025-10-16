@@ -1,0 +1,18 @@
+#include <iostream>
+
+int main () {
+    
+    int first;
+    int second;
+    int temporary;
+    
+    std :: cin >> first >> second;
+    
+    temporary = first;
+    first = second;
+    second = temporary;
+    
+    std :: cout << "first = " << first << std :: endl;
+    std :: cout << "second = " << second << std :: endl;
+    
+}
