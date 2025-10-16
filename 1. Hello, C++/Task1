@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main () {
+    
+    int width;
+    int height;
+    
+    std :: cin >> width >> height;
+    
+    int perimeter = 2 * (width + height); 
+    int area = width * height;
+    
+    std :: cout << "Perimeter = " << perimeter << std :: endl;
+    std :: cout << "Area = " << area << std :: endl;
+    
+}
