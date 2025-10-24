@@ -1,0 +1,24 @@
+#include <iostream>
+
+int main()
+{
+    unsigned int number1, number2;
+    std::cin >> number1 >> number2;
+
+    if (number1 < number2)
+    {
+        int swap = number1;
+        number1 = number2;
+        number2 = swap;
+
+        }
+    while (number2 != 0)
+    {
+        int helpTemp = number1 % number2;
+        number1 = number2;
+        number2 = helpTemp;
+
+    }
+    std::cout << number1;
+
+}
