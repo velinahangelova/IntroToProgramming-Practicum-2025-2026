@@ -1,0 +1,11 @@
+int main()
+{
+    int a;
+    int b;
+    
+    std:: cout<< "Enter two numbers:" << std:: endl;
+    std:: cin>> a>>b;
+    
+    std:: cout << "Is divisor:" << std:: boolalpha << (a!=0 && b%a==0) << std:: endl;
+    
+}
