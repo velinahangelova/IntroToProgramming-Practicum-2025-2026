@@ -1,0 +1,15 @@
+#include <iostream>
+
+int main()
+{
+	unsigned int num;
+	std::cin >> num;
+
+	short units = num % 10;
+	short tens = (num / 10) % 10;
+	short hundreds = (num / 100) % 10;
+	short thousands = num / 1000; 
+
+	std::cout << "Is palindrome: " << std::boolalpha << (units == thousands && tens == hundreds);
+
+}
