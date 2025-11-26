@@ -1,0 +1,14 @@
+#include <iostream>
+
+
+
+int main()
+{
+	unsigned first, second, third;
+
+	std::cin >> first >> second >> third;
+
+	int newNumber = first * 100 + second * 10 + third;
+
+	std::cout << "New number: " << newNumber << std::endl;
+}
