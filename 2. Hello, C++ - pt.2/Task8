@@ -1,0 +1,22 @@
+#include <iostream>
+
+const double baseFare = 2.50;
+const double extraFare = 1.50;
+const double extraNightFare = 0.10;
+const double requestFare = 3.0;
+
+int main()
+{
+	unsigned kilometers;
+
+	std::cin >> kilometers;
+
+	double kmPrice = ((kilometers <= 5) * kilometers * baseFare) + 
+					((kilometers > 5) * ((kilometers - 5) * extraFare + 
+					5 * baseFare));
+
+	double total = ((kmPrice > 20) * (kmPrice * extraNightFare)) +
+					kmPrice + requestFare;
+	
+	std::cout << "Price: " << total;
+}
