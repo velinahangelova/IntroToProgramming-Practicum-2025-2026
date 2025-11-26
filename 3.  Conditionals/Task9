@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+	unsigned aSide, x, y;
+
+	std::cin >> aSide >> x >> y;
+	if ((x / aSide) % 2 == (y / aSide) % 2) {
+		std::cout << "black";
+	 }
+	else {
+		std::cout << "white";
+	}
+
+
+}
