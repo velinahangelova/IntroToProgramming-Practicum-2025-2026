@@ -1,0 +1,18 @@
+#include <iostream>
+
+
+
+int main()
+{
+	int num;
+	std::cin >> num;
+
+	if (num < 0) {
+		std::cout << - num;
+	}
+
+	else {
+		std::cout << num;
+	}
+	return 0;
+}
