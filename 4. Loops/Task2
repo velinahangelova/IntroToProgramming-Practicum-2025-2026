@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	cout << "Enter a number:" << endl;
+	long long number;
+	cin >> number;
+
+	cout << "Enter a position(from right to left):" << endl;
+	unsigned int position;
+	cin >> position;
+
+	bool positionReached = false;
+	while (number != 0 && position > 0) 
+	{
+		unsigned lastDigit = number % 10;
+		position--;
+
+		if (position == 0) 
+		{
+			cout << lastDigit;
+			positionReached = true;
+			break;
+		}
+		number /= 10;
+	}
+	if (!positionReached) 
+	{
+		cout << "Index not present";
+	}
+
+	
+}
+
