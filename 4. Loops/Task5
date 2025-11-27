@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	unsigned long long num;
+	cin >> num;
+
+	unsigned result = 0;
+	unsigned base = 1;
+	while (num > 0)
+	{
+		result += (num % 10) * base;
+		base *= 2;
+		num /= 10;
+	}
+	cout << result;
+
+}
