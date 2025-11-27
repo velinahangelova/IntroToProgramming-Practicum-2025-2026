@@ -1,0 +1,19 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	unsigned num;
+	cin >> num;
+
+	cout << "All natural solutions (x, y) for x + y = " << num << " are: " << std::endl;
+	
+	for (unsigned x=1; x<num; x++)
+	{
+		unsigned y = num - x;
+		cout << "x = " << x << " y = "<<y<<""<< endl;
+
+	}
+
+}
+
