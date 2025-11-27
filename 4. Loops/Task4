@@ -1,0 +1,27 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	unsigned num1, num2;
+	cin >> num1 >> num2;
+
+	unsigned num1Copy = num1;
+	unsigned num2Copy = num2;
+
+	if (num1 < num2) 
+	{
+		unsigned help = num1;
+		num1 = num2;
+		num2 = help;
+
+	}
+	while (num2 != 0) 
+	{
+		unsigned rem = num1 % num2;
+		num1 = num2;
+		num2 = rem;
+	}
+	cout << "LCM is: " << (num1Copy * num2Copy) / num1;
+}
+
