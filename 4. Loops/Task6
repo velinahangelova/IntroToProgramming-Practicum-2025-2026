@@ -1,0 +1,30 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	unsigned num;
+	cin >> num;
+
+	for (unsigned i = 1; i <= num; i++)
+	{
+		for (unsigned j = 1; j <= num; j++)
+		{
+			if (i < j) {
+
+				cout << "+";
+			}
+			else if (i == j)
+			{
+				cout << "0";
+			}
+			else 
+			{
+				cout << "-";
+			}
+
+		}
+		cout << endl;
+
+	}
+}
