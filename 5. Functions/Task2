@@ -18,5 +18,5 @@ int main()
 	unsigned number;
 	cin >> number;
 	
-	cout << "Reversed number: " << reverseNumber(number) << std::endl;
+	cout << "Reversed number: " << reverseNumber(number) << endl;
 }
