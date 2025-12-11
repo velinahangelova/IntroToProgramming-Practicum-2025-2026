@@ -1,0 +1,26 @@
+#include <iostream>
+using namespace std;
+
+unsigned  countDigits(unsigned number)
+{
+	if (number == 0)
+		return 1;
+
+	unsigned cnt = 0;
+
+	while (number > 0)
+	{
+		number = number / 10;
+		cnt++;
+	}
+
+	return cnt;
+}
+
+int main()
+{
+	unsigned number;
+	cin >> number;
+	
+	cout << "The number " << number << " has " << countDigits(number) << " digits." << endl;
+}
