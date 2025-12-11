@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+
+unsigned  reverseNumber(unsigned number)
+{
+	unsigned reversed = 0;
+	while (number > 0)
+	{
+		unsigned lastDigit = number % 10;
+		reversed = (reversed * 10) + lastDigit;
+		number = number / 10;
+	}
+	return reversed;
+}
+
+int main()
+{
+	unsigned number;
+	cin >> number;
+	
+	cout << "Reversed number: " << reverseNumber(number) << std::endl;
+}
