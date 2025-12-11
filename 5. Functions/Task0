@@ -1,0 +1,25 @@
+#include <iostream>
+using namespace std;
+
+long long convertToBinary(unsigned decimalNum)
+{
+	long long result = 0;
+	long long base = 1;
+
+	while (decimalNum > 0)
+	{
+		result = result + decimalNum % 2 * base;
+		base = base * 10;
+		decimalNum = decimalNum / 2;
+	}
+	return result;
+}
+
+int main()
+{
+	cout << "Enter decimal number: " << endl;
+	unsigned decimalNum;
+	cin >> decimalNum;
+
+	cout << "Binary number is: " << convertToBinary(decimalNum) << endl;
+}
