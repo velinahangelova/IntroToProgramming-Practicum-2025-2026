@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+unsigned getDigitCount(unsigned num, unsigned digit)
+{
+	size_t count = 0;
+	while (num > 0)
+	{
+		if (num % 10 == digit)
+		{
+			count++;
+		}
+		num = num / 10;
+	}
+	return count;
+}
+
+unsigned concatCountDigitsAtBack(unsigned num, unsigned digit, size_t count)
+{
+	for (size_t i = 0; i < count; i++)
+	{
+		num = (num * 10) + digit;
+	}
+	return num; 
+}
+
+unsigned long sortNumber(unsigned long num)
+{
+	unsigned long result = 0;
+	for (int i = 9; i >= 0; i--)
+	{
+		unsigned digitCount = getDigitCount(num, i);
+		result = concatCountDigitsAtBack(result, i, digitCount);
+	}
+	return result;
+}
+int main()
+{
+	unsigned long number;
+	cin >> number;
+
+	cout << "Sorted number: " << sortNumber(number);
+}
