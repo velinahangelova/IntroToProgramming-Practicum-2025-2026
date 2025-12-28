@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+
+bool isEvenNum(unsigned int num) {
+	return num % 2 == 0;
+}
+
+unsigned sumOfDigits(unsigned int num) {
+	int sum = 0;
+	while (num > 0) {
+		sum = sum + num % 10;
+		num = num / 10;
+	}
+	return sum;
+}
+
+unsigned productOfDigits(unsigned int num) {
+	int product = 1;
+	while (num > 0) {
+		product = product * (num % 10);
+		num = num / 10;
+	}
+	return product; 
+}
+
+int reverseNum(unsigned int num) {
+	int reversed = 0;
+	while (num > 0) {
+		reversed = (reversed * 10) + (num % 10);
+		num = num / 10;
+	}
+	return reversed;
+}
+
+bool isPalindrome(unsigned int num) {
+	return num == reverseNum(num);
+}
+
+
+int main()
+{
+	unsigned int num; 
+	cout << "Please enter a natural number: " << endl;
+	cin >> num; 
+
+	cout << "Even: " << (isEvenNum(num) ? "Yes" : "No") << endl;
+	cout << "Sum of digits: " << sumOfDigits(num) << endl;
+	cout << "Product of digits: " << productOfDigits(num) << endl;
+	cout << "Palindrome: " << (isPalindrome(num) ? "Yes" : "No") << endl;
+}
