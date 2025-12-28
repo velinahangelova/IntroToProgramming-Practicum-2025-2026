@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int calculateRadius(int x, int y) {
+
+	return  x * x + y * y;
+}
+
+bool areOnTheSameCircle(int firstX, int firstY, int secondX, int secondY) {
+	unsigned firstRadius = calculateRadius(firstX, firstY);
+	unsigned secondRadius = calculateRadius(secondX, secondY);
+
+	return firstRadius == secondRadius;
+}
+
+int main()
+{
+	int a1, a2, a3, a4;
+
+	cout << "Enter coordinates of the first point (a1, b1) and of the second point (a2, b2): " << endl;
+	cin >> a1 >> a2 >> a3 >> a4;
+
+	if (areOnTheSameCircle(a1, a2, a3, a4)) {
+		cout << "The points lie on the same circle centered at (0,0)." << endl;
+	}
+	else {
+		cout << "The points do NOT lie on the same circle centered at (0,0)." << endl;
+	}
+}
