@@ -1,0 +1,49 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+bool isPrimeNum(int num) {
+	bool isPrime = num >= 2;
+
+	for (size_t i = 2; i * i <= num; i++) {
+		if (num % i == 0) {
+			isPrime = false;
+			break;
+		}
+	}
+	return isPrime;
+}
+
+int countPrimeDivisors(int num) {
+	int count = 0;
+
+	for (int i = 2; i * i <= num; i++) {
+		if (num % i == 0 && isPrimeNum(num)) {
+			count++;
+		}
+	}
+	if (num > 1 && isPrimeNum(num)) {
+		count++;
+	}
+	return count;
+}
+
+int countNumbersWithKPrimeDivisors(int a, int b, int k){
+	int total = 0;
+	for (int i = a; i <= b; i++) {
+		if (countPrimeDivisors(i) == k) {
+			total++;
+		}
+	}
+		return total;
+	}
+
+int main()
+{
+	int a, b, k; 
+	cout << "Enter a, b, k: ";
+	cin >> a >> b >> k;
+
+	int result = countNumbersWithKPrimeDivisors(a, b, k);
+	cout << "Number of integers in [ " << a << ", " << b << " ] with exactly "<< k << " distinct prime divisors: " << result << endl;
+}
