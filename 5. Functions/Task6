@@ -1,0 +1,24 @@
+#include <iostream>
+using namespace std;
+
+unsigned square(unsigned x) {
+	return x * x;
+}
+
+unsigned sumOfSquares(unsigned n) {
+	unsigned sum = 0;
+
+	for (unsigned i = 1; i <= n; i++) {
+		sum = sum + square(i);
+	}
+	return sum;
+}
+
+int main()
+{
+	cout << "Enter natural number: " << endl;
+	unsigned number;
+	cin >> number;
+
+	cout << "The sum of squares from 1 to " << number << " is " << sumOfSquares(number) << endl;
+}
