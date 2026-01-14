@@ -1,28 +1,37 @@
 #include <iostream>
 
-void getCountOfLetters(const char* str, unsigned& upper, unsigned& lower) {
+bool isLower(char c) {
+    return c >= 'a' && c <= 'z';
+}
 
+bool isUpper(char c) {
+    return c >= 'A' && c <= 'Z';
+}
+
+void countLetters(const char* str, int& lower, int& upper) {
+    
     if(!str)
+       return;
+    
+    if(*str == '\0') 
         return;
 
-    if(*str == '\0')
-        return;
-
-    if(*str >= 'A' && *str <= 'Z')
+    if(isLower(*str))
+        lower++;
+    else if(isUpper(*str))
         upper++;
 
-    if(*str >= 'a' && *str <= 'z')
-        lower++;
-
-    return getCountOfLetters(++str,upper,lower);
+    countLetters(str + 1, lower, upper); 
 }
 
 int main() {
+    const char* str = "eoPoEr";
 
-    unsigned lower = 0;
-    unsigned upper = 0;
+    int lower = 0;
+    int upper = 0;
 
-    const char* str = "eoPOr";
-    getCountOfLetters(str, upper, lower);
-    std::cout<< upper << " " << lower;
+    countLetters(str, lower, upper);
+
+    std::cout << "Lower letters: " << lower << std::endl;
+    std::cout << "Upper letters: " << upper << std::endl;
 }
