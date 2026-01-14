@@ -1,0 +1,31 @@
+#include <iostream>
+using namespace std;
+
+const size_t SIZE_OF_ARRAY = 100;
+
+void getArray(int arr[], size_t size) {
+	for (size_t i = 0; i < size; i++) {
+		cin >> arr[i];
+	}
+}
+
+void printArray(int arr[], size_t size) {
+	for (size_t i = 0; i < size; i++) {
+		cout << arr[i] << " ";
+	}
+	cout << endl;
+}
+
+int main() {
+	unsigned countOfElements;
+
+	do {
+		cout << "Enter array: " << endl;
+		cin >> countOfElements;
+	} while (countOfElements < 1 || countOfElements > SIZE_OF_ARRAY);
+
+	int arr[SIZE_OF_ARRAY];
+
+	getArray(arr, countOfElements);
+	printArray(arr, countOfElements);
+}
